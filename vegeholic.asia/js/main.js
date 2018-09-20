@@ -1,5 +1,15 @@
 (function() {
 
+  // Static addon
+  $('#search').remove();
+  // remove login
+  $('.navright li:nth-child(2)').remove();
+  $('.navright li:nth-child(2)').remove();
+  // remove | 
+  var $cont = $('.navright li:nth-child(1)');
+  var html = $('.navright li:nth-child(1)').html().replace('｜', '');
+  $cont.html(html);
+
   var mobileMenuOutsideClick = function() {
 
     $(document).click(function(e) {
