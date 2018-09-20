@@ -1,0 +1,606 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="zh-Hant" class="no-js">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>食譜 - 全植食尚 Vegeholic</title>
+
+	
+    <meta name="description" content="一個分享健康飲食資訊、營養又不失美味的全植物性食譜網站。讓大家在輕鬆享有健康身體的同時，體會到一個對健康、環境都更友善的飲食方式！"/>
+
+	<script src="cdn-cgi/apps/head/knzUs4dqLCJMg2U2bv_DrJdwMIw.js"></script><link rel="shortcut icon" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/touch_icon_iphone.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/touch_icon_iphone6-plus.png">
+
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="address=no">
+	<meta http-equiv="imagetoolbar" content="no"/>
+	<meta http-equiv="expires" content="0">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="全植食尚 Vegeholic">
+
+	<meta property="fb:app_id" content="776485449190012">
+	<div id="fb-root"></div>
+	<script>
+		(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.8&appId=776485449190012";
+		fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+
+	<!-- CSRF Token -->
+	<meta name="csrf-token" content="fHLBz3bnByygUlbvWP4M34MmRBkkWRKADY7yka7b">
+	
+	<style type="text/css">
+		@import  url('https://fonts.googleapis.com/css?family=Amatic+SC:700');
+	</style>
+
+    <!-- Animate.css 動畫 -->
+	<link rel="stylesheet" href="lib/css/animate.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+	<!-- Icon Fonts -->
+	<link rel="stylesheet" href="lib/css/icomoon.css">
+	<link rel="stylesheet" type="text/css" href="lib/css/flaticon.css">		
+	<!-- Flexslider 內容輪播滑動插件 -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.2/flexslider.min.css">
+	<!-- Magnific Popup 燈箱效果插件 -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/0.9.9/magnific-popup.min.css">	
+	<!-- Alert -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+	<!-- Theme style -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS 判斷是否支援 HTML5 功能 -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+	<meta property="og:title" content="食譜">
+<style type="text/css">
+    .image-container div {
+        height: 200px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }		
+    .edit-recipe {
+        cursor: pointer;
+    }
+    .btn {
+        text-transform: none !important;
+    }
+    .btn-spe {
+        background-color: #61BDDB !important;
+    }
+    .btn-spe:hover{
+        background-color: #4A91A8 !important;
+    }
+</style>	
+
+	<style type="text/css">
+		@import  url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+	</style>
+</head>
+
+<body>
+	<!-- Loading icon -->
+	<div class="loader"></div>
+	<!-- 最外層div：頁面佈局 -->
+	<div id="page">
+		
+		<!-- 第一層 nav 導覽列 -->
+		<nav class="nav col-xs-12" role="navigation">
+			<div class="container">
+				<div class="row">
+
+										<div class="navright">
+						<ul>
+							<li><a href="recipe%3Flang=en.html">English</a>｜</li>
+							<li><a href="auth/facebook.html">FB 快速登入</a>｜</li>	
+							<li><a href="member/likes.html">登入</a></li>
+						</ul>
+					</div>
+										
+					<div class="col-xs-12 text-center">
+						<div id="logo"><a href="logout.html"><img src="img/logo.svg" width="260" alt="全植食尚 Vegeholic"/> </a></div>
+			    	</div>
+					<div class="col-xs-12 text-center menu-1">
+						<ul>
+							<li class="AA"><a href="logout.html" class="">回首頁</a></li>
+							<li class="BB"><a href="about.html" class="">關於我</a></li>
+							<li class="CC"><a href="recipe.html" class="">找食譜</a></li>
+							<li class="DD"><a href="create.html" class="">寫食譜</a></li>
+							<li class="EE"><a href="http://blog.vegeholic.asia/" class="">讀食記</a></li>
+							<!--li class="FF"><a href="">逛市集</a></li-->
+							<li class="GG"><a href="https://goo.gl/CWM1Ws" class="">看影片</a></li>
+						</ul>
+  					</div>
+				</div>
+			</div>
+		</nav>
+			
+		
+<!-- 第二層 header 圖片 -->
+<header id="header" class="cover" role="banner" style="background-image:url(https://d163yelobtilcy.cloudfront.net/cdn/img/img_bg_recipes.jpg);">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-md-offset-0 text-center">
+                <div class="display-t">
+                    <div class="display-tc animate-box" data-animate-effect="fadeInUp">
+                        <h1 class="mb30">All Recipes</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+<!-- Search 食譜食材搜尋 -->
+<div id="search" >
+    <div class="container">
+        <div class="row">
+            <form action="recipe.html" method="get">
+                <div class="col-md-12 text-center">
+                    <div class="col-md-10 col-xs-8">
+                        <input type="text" class="form-control" name="query" placeholder="搜尋食譜和食材">
+                    </div>
+                    <div class="col-md-2 col-xs-4">
+                        <button type="submit" class="btn btn-primary"><i class="icon-search"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- 第四層 食譜 -->
+<div id="meal_paging">
+   
+    <div class="container">
+        
+        <div class="row row-pb-md">
+            <div class="col-md-8 col-md-offset-2 text-center heading  animate-box">
+                <span>All Recipes</span>
+                <h2>食譜</h2>
+            </div>
+        </div>	
+
+        
+         
+            <!-- 關鍵字 -->
+            <div class="category" style="display:inline;">
+                                <div class="btn">
+                    <a href="recipe%3F.html">全部</a>
+                </div>
+                 
+                <div class="btn">
+                    <a href="recipe%3Fsort=latest&amp;cat=1&amp;page=8.html">早餐</a>
+                </div>
+                 
+                <div class="btn">
+                    <a href="recipe%3Fsort=latest&amp;cat=2&amp;page=8.html">午晚餐</a>
+                </div>
+                 
+                <div class="btn">
+                    <a href="recipe%3Fsort=latest&amp;cat=3&amp;page=8.html">沙拉</a>
+                </div>
+                 
+                <div class="btn">
+                    <a href="recipe%3Fsort=latest&amp;cat=4&amp;page=8.html">甜點烘培</a>
+                </div>
+                 
+                <div class="btn">
+                    <a href="recipe%3Fsort=latest&amp;cat=5&amp;page=8.html">飲品</a>
+                </div>
+                 
+                <div class="btn">
+                    <a href="recipe%3Fsort=latest&amp;cat=6&amp;page=8.html">湯品</a>
+                </div>
+                 
+                <div class="btn">
+                    <a href="recipe%3Fsort=latest&amp;cat=7&amp;page=8.html">沾醬</a>
+                </div>
+                 
+                <div class="btn">
+                    <a href="recipe%3Fsort=latest&amp;cat=8&amp;page=8.html">其他</a>
+                </div>
+                            </div>
+            <hr>
+         
+            
+        
+                    <!-- 健康專區 -->
+            <div class="category2" style="display:inline;">
+                <div class="btn">
+                    <a href="recipe%3Fsort=latest&amp;query=%25E9%25AB%2598%25E8%259B%258B%25E7%2599%25BD&amp;cat=6&amp;page=8.html">高蛋白</a>
+                </div>
+                <div class="btn">
+                    <a href="recipe%3Fsort=latest&amp;query=%25E4%25BD%258E%25E7%25B3%2596&amp;cat=6&amp;page=8.html">低糖</a>
+                </div>
+                <div class="btn">
+                    <a href="recipe%3Fsort=latest&amp;query=%25E4%25BD%258E%25E6%25B2%25B9&amp;cat=6&amp;page=8.html">低油</a>
+                </div>	
+                <div class="btn">
+                    <a href="recipe%3Fsort=latest&amp;query=%25E7%2584%25A1%25E9%25BA%25A9%25E8%25B3%25AA&amp;cat=6&amp;page=8.html">無麩質</a>
+                </div>
+                <div class="btn">
+                    <a href="recipe%3Fsort=latest&amp;query=%25E7%2595%25B0%25E5%259C%258B%25E6%2596%2599%25E7%2590%2586&amp;cat=6&amp;page=8.html">異國料理</a>
+                </div>	
+                <div class="btn">
+                    <a href="recipe%3Fsort=latest&amp;query=%25E4%25B8%25AD%25E5%25BC%258F%25E9%25B9%25B9%25E9%25A3%259F&amp;cat=6&amp;page=8.html">中式鹹食</a>
+                </div>
+                <div class="btn">
+                    <a href="recipe%3Fsort=latest&amp;query=%25E8%25A3%25B8%25E9%25A3%259F&amp;cat=6&amp;page=8.html">裸食</a>
+                </div>
+                <div class="btn">
+                    <a href="recipe%3Fsort=latest&amp;query=%25E7%2584%25A1%25E4%25BA%2594%25E8%25BE%259B&amp;cat=6&amp;page=8.html">無五辛</a>
+                </div>			
+            </div>
+            <hr>
+                    
+        
+         
+        <!-- 排序 -->
+        <div class="order">
+            排序依：
+            <button type="button" class="btn btn-primary"><a href="recipe%3Fsort=latest&amp;query=%25E7%2584%25A1%25E4%25BA%2594%25E8%25BE%259B&amp;cat=6&amp;page=8.html">最新發布</a></button>
+            <button type="button" class="btn btn-default"><a href="recipe%3Fsort=popular&amp;query=%25E7%2584%25A1%25E4%25BA%2594%25E8%25BE%259B&amp;cat=6&amp;page=8.html">最多點擊</a></button>
+            <button type="button" class="btn btn-default"><a href="recipe%3Fsort=likes&amp;query=%25E7%2584%25A1%25E4%25BA%2594%25E8%25BE%259B&amp;cat=6&amp;page=8.html">收藏人數</a></button>
+        </div>
+        <hr>
+                
+
+        <!-- 食譜列表 -->
+                                                    <div class="row">
+                            <div class="col-md-3 col-sm-6 project animate-box" data-animate-effect="fadeIn">
+                    <div class="preview">
+                        <i class="icon-eye"></i>322
+                                                <i class="icon-heart2"></i>1
+                                            </div>
+                    <div class="image-container">
+                        <a href="recipe/92.html">
+                            <div class="img-responsive" style="background-image: url(https://d163yelobtilcy.cloudfront.net/recipe/8/ab8333ac3e4557146068bd77c0b6ef52117eaad9.jpg)"></div>
+                            <h3>九層塔香茅青醬義大利麵</h3>
+                        </a>
+                    </div>
+                    <p class="author">
+                        
+                                                    <span class="source1">原創</span>
+                            <a href="user/498.html"><img class="fb-avatar" src="https://graph.facebook.com/v2.6/10208341797808525/picture?type=square&amp;height=50&amp;width=50"></a>
+                            <cite>湘湘</cite>
+                                            </p>
+                </div>
+                                                                        <div class="col-md-3 col-sm-6 project animate-box" data-animate-effect="fadeIn">
+                    <div class="preview">
+                        <i class="icon-eye"></i>387
+                                                <i class="icon-heart2"></i>0
+                                            </div>
+                    <div class="image-container">
+                        <a href="recipe/91.html">
+                            <div class="img-responsive" style="background-image: url(https://d163yelobtilcy.cloudfront.net/recipe/4/8737bec5d75c545166b79fea56173b2463c7a10f.jpg)"></div>
+                            <h3>五行竹笙玉米濃湯</h3>
+                        </a>
+                    </div>
+                    <p class="author">
+                        
+                                                    <span class="source1">原創</span>
+                            <a href="user/1012.html"><img class="fb-avatar" src="https://profile.line-scdn.net/0hCbSeSG3KHE1uHDMf9fZjGlJZEiAZMhoFFi5aeUxOQXgUfF1MVXhTLEhMFX8TKwhLASlXfEIYFnRK"></a>
+                            <cite>品潔💗粉紅熊🐌🐢🐌🐢🐌🐢🐌🐢🐌🐢🐌🐢🐌🐢</cite>
+                                            </p>
+                </div>
+                                                                        <div class="col-md-3 col-sm-6 project animate-box" data-animate-effect="fadeIn">
+                    <div class="preview">
+                        <i class="icon-eye"></i>561
+                                                <i class="icon-heart2"></i>3
+                                            </div>
+                    <div class="image-container">
+                        <a href="recipe/86.html">
+                            <div class="img-responsive" style="background-image: url(https://d163yelobtilcy.cloudfront.net/recipe/8/f04b0733085d14b6ecd0b32b70f414d6780c25bb.jpg)"></div>
+                            <h3>可可番薯杯糕霜</h3>
+                        </a>
+                    </div>
+                    <p class="author">
+                        
+                                                    <span class="source1">原創</span>
+                            <a href="user/4.html"><img class="fb-avatar" src="https://graph.facebook.com/v2.6/10209866947942111/picture?type=square&amp;height=50&amp;width=50"></a>
+                            <cite>Anne Lin</cite>
+                                            </p>
+                </div>
+                                                                        <div class="col-md-3 col-sm-6 project animate-box" data-animate-effect="fadeIn">
+                    <div class="preview">
+                        <i class="icon-eye"></i>750
+                                                <i class="icon-heart2"></i>4
+                                            </div>
+                    <div class="image-container">
+                        <a href="recipe/85.html">
+                            <div class="img-responsive" style="background-image: url(https://d163yelobtilcy.cloudfront.net/recipe/7/b3df52605f65cb2a21ad993c65c6257dbe8de106.jpg)"></div>
+                            <h3>藍莓起司裸食蛋糕/免烘烤</h3>
+                        </a>
+                    </div>
+                    <p class="author">
+                        
+                                                    <span class="source1">原創</span>
+                            <a href="user/498.html"><img class="fb-avatar" src="https://graph.facebook.com/v2.6/10208341797808525/picture?type=square&amp;height=50&amp;width=50"></a>
+                            <cite>湘湘</cite>
+                                            </p>
+                </div>
+                        </div>
+                                                                    <div class="row">
+                            <div class="col-md-3 col-sm-6 project animate-box" data-animate-effect="fadeIn">
+                    <div class="preview">
+                        <i class="icon-eye"></i>1577
+                                                <i class="icon-heart2"></i>10
+                                            </div>
+                    <div class="image-container">
+                        <a href="recipe/84.html">
+                            <div class="img-responsive" style="background-image: url(https://d163yelobtilcy.cloudfront.net/recipe/6/24ffbff99a3db19ea693de8e994b2752b433249e.jpg)"></div>
+                            <h3>老奶奶胡蘿蔔鬆餅</h3>
+                        </a>
+                    </div>
+                    <p class="author">
+                        
+                                                    <span class="source1">原創</span>
+                            <a href="user/12.html"><img class="fb-avatar" src="https://graph.facebook.com/v2.6/1897127130506500/picture?type=square&amp;height=50&amp;width=50"></a>
+                            <cite>張芸慈</cite>
+                                            </p>
+                </div>
+                                                                        <div class="col-md-3 col-sm-6 project animate-box" data-animate-effect="fadeIn">
+                    <div class="preview">
+                        <i class="icon-eye"></i>348
+                                                <i class="icon-heart2"></i>0
+                                            </div>
+                    <div class="image-container">
+                        <a href="recipe/83.html">
+                            <div class="img-responsive" style="background-image: url(https://d163yelobtilcy.cloudfront.net/recipe/8/b9f4cc1e42896f6837dd9b7ba8a1e5d9c0b31398.jpg)"></div>
+                            <h3>~六一膳房小廚娘料理~飄洋過海五行拌炒</h3>
+                        </a>
+                    </div>
+                    <p class="author">
+                        
+                                                    <span class="source1">原創</span>
+                            <a href="user/1012.html"><img class="fb-avatar" src="https://profile.line-scdn.net/0hCbSeSG3KHE1uHDMf9fZjGlJZEiAZMhoFFi5aeUxOQXgUfF1MVXhTLEhMFX8TKwhLASlXfEIYFnRK"></a>
+                            <cite>品潔💗粉紅熊🐌🐢🐌🐢🐌🐢🐌🐢🐌🐢🐌🐢🐌🐢</cite>
+                                            </p>
+                </div>
+                                                                        <div class="col-md-3 col-sm-6 project animate-box" data-animate-effect="fadeIn">
+                    <div class="preview">
+                        <i class="icon-eye"></i>373
+                                                <i class="icon-heart2"></i>1
+                                            </div>
+                    <div class="image-container">
+                        <a href="recipe/82.html">
+                            <div class="img-responsive" style="background-image: url(https://d163yelobtilcy.cloudfront.net/recipe/6/e05952f285fac4b50c7c2f41cce1a5239ab31e76.jpg)"></div>
+                            <h3>豆穀奶</h3>
+                        </a>
+                    </div>
+                    <p class="author">
+                        
+                                                    <span class="source1">原創</span>
+                            <a href="user/498.html"><img class="fb-avatar" src="https://graph.facebook.com/v2.6/10208341797808525/picture?type=square&amp;height=50&amp;width=50"></a>
+                            <cite>湘湘</cite>
+                                            </p>
+                </div>
+                                                                        <div class="col-md-3 col-sm-6 project animate-box" data-animate-effect="fadeIn">
+                    <div class="preview">
+                        <i class="icon-eye"></i>2493
+                                                <i class="icon-heart2"></i>2
+                                            </div>
+                    <div class="image-container">
+                        <a href="recipe/81.html">
+                            <div class="img-responsive" style="background-image: url(https://d163yelobtilcy.cloudfront.net/recipe/7/566a43984e56e400915d5830905deafbb5e41bb7.jpg)"></div>
+                            <h3>湘湘綠拿鐵</h3>
+                        </a>
+                    </div>
+                    <p class="author">
+                        
+                                                    <span class="source1">原創</span>
+                            <a href="user/498.html"><img class="fb-avatar" src="https://graph.facebook.com/v2.6/10208341797808525/picture?type=square&amp;height=50&amp;width=50"></a>
+                            <cite>湘湘</cite>
+                                            </p>
+                </div>
+                        </div>
+                                                                    <div class="row">
+                            <div class="col-md-3 col-sm-6 project animate-box" data-animate-effect="fadeIn">
+                    <div class="preview">
+                        <i class="icon-eye"></i>409
+                                                <i class="icon-heart2"></i>1
+                                            </div>
+                    <div class="image-container">
+                        <a href="recipe/80.html">
+                            <div class="img-responsive" style="background-image: url(https://d163yelobtilcy.cloudfront.net/recipe/5/cbc15ebd42ac3fd3649d9c779a1bb92272f6f1c2.jpg)"></div>
+                            <h3>Buddha bowl 全植繽紛碗</h3>
+                        </a>
+                    </div>
+                    <p class="author">
+                        
+                                                    <span class="source1">原創</span>
+                            <a href="user/4.html"><img class="fb-avatar" src="https://graph.facebook.com/v2.6/10209866947942111/picture?type=square&amp;height=50&amp;width=50"></a>
+                            <cite>Anne Lin</cite>
+                                            </p>
+                </div>
+                                                                        <div class="col-md-3 col-sm-6 project animate-box" data-animate-effect="fadeIn">
+                    <div class="preview">
+                        <i class="icon-eye"></i>284
+                                                <i class="icon-heart2"></i>0
+                                            </div>
+                    <div class="image-container">
+                        <a href="recipe/79.html">
+                            <div class="img-responsive" style="background-image: url(https://d163yelobtilcy.cloudfront.net/recipe/0/6f97c2c68247a849077e64ede709d035685a11eb.jpg)"></div>
+                            <h3>有中東味的麵條</h3>
+                        </a>
+                    </div>
+                    <p class="author">
+                        
+                                                    <span class="source1">原創</span>
+                            <a href="user/498.html"><img class="fb-avatar" src="https://graph.facebook.com/v2.6/10208341797808525/picture?type=square&amp;height=50&amp;width=50"></a>
+                            <cite>湘湘</cite>
+                                            </p>
+                </div>
+                                                                        <div class="col-md-3 col-sm-6 project animate-box" data-animate-effect="fadeIn">
+                    <div class="preview">
+                        <i class="icon-eye"></i>356
+                                                <i class="icon-heart2"></i>2
+                                            </div>
+                    <div class="image-container">
+                        <a href="recipe/78.html">
+                            <div class="img-responsive" style="background-image: url(https://d163yelobtilcy.cloudfront.net/recipe/8/0b398fe46b8ebc2b2eee10620ce93fda342d8d7d.jpg)"></div>
+                            <h3>湘式酸辣綠椰醬配薑黃飯</h3>
+                        </a>
+                    </div>
+                    <p class="author">
+                        
+                                                    <span class="source1">原創</span>
+                            <a href="user/498.html"><img class="fb-avatar" src="https://graph.facebook.com/v2.6/10208341797808525/picture?type=square&amp;height=50&amp;width=50"></a>
+                            <cite>湘湘</cite>
+                                            </p>
+                </div>
+                                                                        <div class="col-md-3 col-sm-6 project animate-box" data-animate-effect="fadeIn">
+                    <div class="preview">
+                        <i class="icon-eye"></i>424
+                                                <i class="icon-heart2"></i>4
+                                            </div>
+                    <div class="image-container">
+                        <a href="recipe/77.html">
+                            <div class="img-responsive" style="background-image: url(https://d163yelobtilcy.cloudfront.net/recipe/5/64b36543552b9063c8948381c2f4936fc1fd7b7e.jpg)"></div>
+                            <h3>仿和菓子～藜麥抹茶黃豆能量球</h3>
+                        </a>
+                    </div>
+                    <p class="author">
+                        
+                                                    <span class="source1">原創</span>
+                            <a href="user/12.html"><img class="fb-avatar" src="https://graph.facebook.com/v2.6/1897127130506500/picture?type=square&amp;height=50&amp;width=50"></a>
+                            <cite>張芸慈</cite>
+                                            </p>
+                </div>
+                        </div>
+                                
+                
+        <!-- 分頁按鈕 -->
+        <div class="col-md-12 text-center">
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+        
+                    <li><a href="recipe%3Fsort=latest&amp;query=%25E7%2584%25A1%25E4%25BA%2594%25E8%25BE%259B&amp;cat=6&amp;page=7.html" rel="prev">&laquo;</a></li>
+        
+        
+                    
+            
+            
+                                                                        <li><a href="recipe%3Fsort=latest&amp;query=%25E7%2584%25A1%25E4%25BA%2594%25E8%25BE%259B&amp;cat=6&amp;page=1.html">1</a></li>
+                                                                                <li><a href="recipe%3Fsort=latest&amp;query=%25E7%2584%25A1%25E4%25BA%2594%25E8%25BE%259B&amp;cat=6&amp;page=2.html">2</a></li>
+                                                                                <li><a href="recipe%3Fsort=latest&amp;query=%25E7%2584%25A1%25E4%25BA%2594%25E8%25BE%259B&amp;cat=6&amp;page=3.html">3</a></li>
+                                                                                <li><a href="recipe%3Fsort=latest&amp;query=%25E7%2584%25A1%25E4%25BA%2594%25E8%25BE%259B&amp;cat=6&amp;page=4.html">4</a></li>
+                                                                                <li><a href="recipe%3Fsort=latest&amp;query=%25E7%2584%25A1%25E4%25BA%2594%25E8%25BE%259B&amp;cat=6&amp;page=5.html">5</a></li>
+                                                                                <li><a href="recipe%3Fsort=latest&amp;query=%25E7%2584%25A1%25E4%25BA%2594%25E8%25BE%259B&amp;cat=6&amp;page=6.html">6</a></li>
+                                                                                <li><a href="recipe%3Fsort=latest&amp;query=%25E7%2584%25A1%25E4%25BA%2594%25E8%25BE%259B&amp;cat=6&amp;page=7.html">7</a></li>
+                                                                                <li class="active"><span>8</span></li>
+                                                                                <li><a href="recipe%3Fsort=latest&amp;query=%25E7%2584%25A1%25E4%25BA%2594%25E8%25BE%259B&amp;cat=6&amp;page=9.html">9</a></li>
+                                                                                <li><a href="recipe%3Fsort=latest&amp;query=%25E7%2584%25A1%25E4%25BA%2594%25E8%25BE%259B&amp;cat=6&amp;page=10.html">10</a></li>
+                                                                                <li><a href="recipe%3Fsort=latest&amp;query=%25E7%2584%25A1%25E4%25BA%2594%25E8%25BE%259B&amp;cat=6&amp;page=11.html">11</a></li>
+                                                        
+        
+                    <li><a href="recipe%3Fsort=latest&amp;query=%25E7%2584%25A1%25E4%25BA%2594%25E8%25BE%259B&amp;cat=6&amp;page=9.html" rel="next">&raquo;</a></li>
+            </ul>
+
+            </nav>
+        </div>
+    
+    </div>
+</div>
+		
+		<!-- footer 底部 -->
+		<footer id="foot" role="contentinfo" class=" bg-footer">
+			<div class="container">
+				<div class="row row-pb-md">
+					<div class="col-md-2  widget ">
+						<p><a href="logout.html"><img src="img/logo_footer.png" alt="全植食尚 Vegeholic"/></a></p>
+					</div>
+					<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1 ">
+						<ul class=" footer-links">
+							<h4>關於我們</h4>
+							<li><a href="about.html">公司資訊</a></li>
+							<li><a href="https://www.facebook.com/vegeholic.asia/">廣告合作</a></li>
+							<li><a href="https://blog.vegeholic.asia/privacy_policy/">隱私政策</a></li>
+							<li><a href="https://blog.vegeholic.asia/license/">授權條款</a></li>
+						</ul>
+					</div>
+
+					<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1 ">
+						<ul class=" footer-links">
+							<h4>購物資訊</h4>
+							<li><a href="javascript:void(0);">購物須知</a></li>
+							<li><a href="javascript:void(0);">售後服務</a></li>
+							<li><a href="javascript:void(0);">查看訂單</a></li>
+							<li><a href="javascript:void(0);">常見問題</a></li>
+						</ul>
+					</div>
+
+					<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1 ">
+						<ul class=" footer-links">
+							<h4>會員服務</h4>
+							<li><a href="member.html">會員專區</a></li>
+							<li><a href="member/recipe.html">找食譜</a></li>
+							<li><a href="member/likes.html">最愛收藏</a></li>
+							<li><a href="logout.html">登出</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-6 col-md-push-1 ">
+						<ul class="social-icons ">
+							<li><a href="https://www.youtube.com/channel/UCxPPHNgwcbMGa0mkM9kqk-Q"><i class="icon-youtube"></i></a></li>
+							<li><a href="https://www.instagram.com/vegeholic_asia/"><i class="icon-instagram"></i></a></li>
+							<li><a href="https://www.facebook.com/vegeholic.asia/"><i class="icon-facebook"></i></a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="row copyright">
+					<div class="col-md-12 text-center">
+						<div class="like-wrap">
+							<div class="fb-like" data-href="https://www.facebook.com/vegeholic.asia/" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true" data-width="200"></div>
+						</div>
+						<br>
+						<p><small class="block">Copyright &copy; 2017 Vegeholic. All rights reserved.</small></p>
+					</div>
+				</div>
+
+			</div>
+		</footer>
+	</div>
+
+	<!-- go top 回到網頁上方 -->
+	<div class="gototop js-top">
+		<a href="recipe%3Fsort=latest&amp;query=%25E7%2584%25A1%25E4%25BA%2594%25E8%25BE%259B&amp;cat=6&amp;page=8.html#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+
+	<script>
+        window.Laravel = {"csrfToken":"fHLBz3bnByygUlbvWP4M34MmRBkkWRKADY7yka7b"}    </script>
+	
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- jQuery Easing 動畫效果擴充-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+	<!-- Bootstrap -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>	
+	<!-- Flexslider 內容輪播滑動插件-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.2/jquery.flexslider.min.js"></script>
+	<!-- Magnific Popup 燈箱效果插件-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/0.9.9/jquery.magnific-popup.min.js"></script>
+	<script src="lib/js/magnific-popup-options.js"></script>
+	<!-- Waypoints 視差滾動插件-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+	<!-- Alert -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	<script src="js/edit-delete.js"></script>
+
+	</body>
+</html>
