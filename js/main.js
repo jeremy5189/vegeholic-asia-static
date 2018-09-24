@@ -1,7 +1,7 @@
 (function() {
 
   // Static addon
-  $('#search').remove();
+  $('#search').css('opacity', '0').css('margin-bottom', '-200px');
   // remove login
   $('.navright li:nth-child(2)').remove();
   $('.navright li:nth-child(2)').remove();
